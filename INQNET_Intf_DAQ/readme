@@ -1,0 +1,8 @@
+mysql -U root -p  //enter
+Teleport1536!       //passw
+show databases;          //avilable DB
+create database teleportcommission;      // create a new DB
+use teleportcommission;          // use a specific DB
+create table interf(id int not null primary key auto_increment, Vmax0 float, Vmax1 float, Vmax2 float, datetime datetime); // create a new table//
+show tables;    //show avilable tables in this DB
+
