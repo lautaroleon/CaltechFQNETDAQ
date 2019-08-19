@@ -11,8 +11,8 @@ import os
 def string_to_date(time):
     return time[2:4]+time[5:7]+time[8:10]+time[11:13]+time[14:16]+time[17:19]
 #parameters
-START_TIME = '2019-08-01 11:44:00'
-END_TIME = '2019-08-01 13:24:00'
+START_TIME = '2019-08-03 22:34:00'
+END_TIME = '2019-08-05 10:31:00'
 TABLE_NAME = 'interf'
 
 
