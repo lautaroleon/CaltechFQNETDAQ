@@ -7,14 +7,14 @@ def InitiateResource():
         print("Device number " + str(index) + " - " + ResourceList[index])
     DeviceNumber = raw_input("Which device would you like to use?")
     Resource = VISAInstance.open_resource(ResourceList[int(DeviceNumber)])
-    if int(DeviceNumber) == 2:
-        print 'Temperature contoller'
-        Resource.baud_rate = 115200
-        Resource.data_bits = 8
-        Resource.stop_bits = visa.constants.StopBits.one
-        Resource.parity = visa.constants.Parity.none
-        Resource.read_termination = '\r'
-        Resource.write_termination = '\r'
+#    if int(DeviceNumber) == 2:
+#        print 'Temperature contoller'
+#        Resource.baud_rate = 115200
+#        Resource.data_bits = 8
+#        Resource.stop_bits = visa.constants.StopBits.one
+#        Resource.parity = visa.constants.Parity.none
+#        Resource.read_termination = '\r'
+#        Resource.write_termination = '\r'
     return Resource
 
 def SetVoltage(Resource, ChannelNumber, ChVoltage, VoltageSettleTime = 120, Debug = False):
@@ -36,7 +36,7 @@ def SetVoltage(Resource, ChannelNumber, ChVoltage, VoltageSettleTime = 120, Debu
         if not Debug:
             print 'Sleeping for %ds, for voltage to take effect' % VoltageSettleTime
             time.sleep(VoltageSettleTime)
-            print 'Now returning the program flow to Autopilot'
+#           print 'Now returning the program flow to Autopilot'
     else:
         print '[WARNING] : The voltage is out of the bounds [0-2V], not changing the low voltage supply output'
 
